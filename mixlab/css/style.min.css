@@ -853,7 +853,6 @@ body.ie ._ibg img {
 }
 .header__menu {
   display: flex;
-  flex: 0 0 38.5964912281%;
   align-items: center;
 }
 .header__buttons {
