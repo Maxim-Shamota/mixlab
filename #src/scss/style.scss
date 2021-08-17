@@ -41,6 +41,7 @@ $lightBlueColor: #DFF5F6;
 @import "null";
 body {
 	color: $mainColor;
+	overflow: auto;
 	&._lock {
 		overflow: hidden;
 	}
