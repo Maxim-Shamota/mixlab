@@ -22,10 +22,10 @@ $fontSize: 16;
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
-$minWidth: 320px;
+$minWidth: 270px;
 $maxWidth: 1440;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -39,13 +39,16 @@ $lightBlueColor: #DFF5F6;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
 	color: $mainColor;
 	overflow: auto;
+
 	&._lock {
 		overflow: hidden;
 	}
 }
+
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -55,9 +58,10 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	&._loaded {
-	}
+
+	&._loaded {}
 }
+
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -65,17 +69,21 @@ body {
 	max-width: $maxWidthContainer + px;
 	padding: 0px 15px;
 	margin: 0 auto;
+
 	@media (max-width: $md1 + px) {
 		max-width: 970px;
 	}
+
 	@media (max-width: $md2+px) {
 		max-width: 750px;
 	}
+
 	@media (max-width: $md3+px) {
 		max-width: none;
 		padding: 0 10px;
 	}
 }
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
@@ -96,7 +104,262 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+
+	&__main {}
+
+	&__support {}
+
+	&__about {}
+
+	&__forVeterinarians {}
 }
+
+//===================================================================================================================================
+
+.main-page {
+	position: relative;
+	padding-top: 93px;
+	min-height: 651px;
+
+	&__img {
+		top: 93px;
+	}
+
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__wrapper {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		text-align: center;
+		padding: 102px 10px 244px 10px;
+		// @include adaptiv-value("padding-top", 244, 50, 1);
+		z-index: 1;
+	}
+
+	&__title {
+		max-width: 672px;
+		font-weight: 400;
+		@include adaptiv-value("font-size", 55, 45, 1);
+		@include adaptiv-value("line-height", 67, 57, 1);
+		color: #000000;
+		padding-bottom: 32px;
+	}
+
+	&__subtitle {
+		max-width: 500px;
+		font-weight: 400;
+		@include adaptiv-value("font-size", 20, 16, 1);
+		@include adaptiv-value("line-height", 28, 20, 1);
+		color: #000000;
+		padding-bottom: 23px;
+	}
+
+	&__button {}
+}
+
+//===================================================================================================================================
+
+.supported {
+	min-height: 719px;
+	padding: 58px 5px 45px 5px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		flex-basis: 50%;
+		padding-right: 43px;
+		padding-bottom: 27px;
+	}
+
+	&__left-title {
+		font-weight: 400;
+		@include adaptiv-value("font-size", 44, 26, 1);
+		line-height: 53px;
+	}
+
+	&__left-img {
+		width: 280px;
+		height: 377px;
+		@include adaptiv-value("margin-lift", 103, 0, 1);
+	}
+
+	&__right {
+		flex-basis: 50%;
+		padding-left: 104px;
+
+		@media (max-width:$md2+px) {
+			padding-left: 0;
+		}
+	}
+
+	&__right-block {
+		margin-bottom: 31px;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #F7A500;
+		}
+
+		;
+
+		&_title {
+			color: $darkPurpleColor;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 32px;
+			padding-bottom: 16px;
+		}
+
+		&_text {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 23px;
+			padding-bottom: 33px;
+		}
+	}
+}
+
+//===================================================================================================================================
+
+.about {
+	min-height: 663px;
+	background: #FAF9F6;
+	padding: 60px 0px;
+	text-align: center;
+
+	&__title {
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 53px;
+		padding-bottom: 65px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width:$md2+px){
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		max-width: 360px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin: 0px 32px 0px 0px;
+		}
+	}
+
+	&__item-img {
+		background-color: #FFF7C2;
+		border-radius: 50%;
+		width: 192px;
+		height: 192px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 31px;
+
+		img {
+			max-width: 221px;
+			max-height: 221px;
+		}
+	}
+
+	&__item-title {
+		color: $darkPurpleColor;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 400;
+		padding-bottom: 8px;
+	}
+
+	&__item-text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 23px;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	&__button {
+		margin-top: 48px;
+	}
+}
+
+//===================================================================================================================================
+
+.forVeterinarians {
+	padding: 0px 5px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width:$md2+px){
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		flex-basis: 50%;
+		@media (max-width:$md2+px){
+			min-height: 700px;
+		}
+	}
+
+	&__descr {
+		flex-basis: 50%;
+		padding: 151px 5px 150px 30px;
+		@media (max-width:$md2+px){
+			padding: 50px 0px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.96px;
+		text-transform: uppercase;
+		color: #F7A500;
+		padding-bottom: 8px;
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 53px;
+		padding-bottom: 40px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 23px;
+		padding-bottom: 26px;
+	}
+
+	&__button {
+		margin-bottom: 10px;
+	}
+}
+
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

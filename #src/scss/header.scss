@@ -4,8 +4,35 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+	min-height: 40px;
+
+	@media (max-width:$md3+px) {
+		min-height: 5px;
+	}
+
+	&._scroll {
+		.header__wrapper {
+			background-color: rgba(255, 255, 255, 0.8);
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.9);
+				}
+			}
+		}
+
+		.header__body {
+			min-height: 50px;
+
+			@media (min-width:$md2+px) {
+				min-height: 70px;
+			}
+		}
+	}
 
 	&__wrapper {
+		background-color: #fff;
+		transition: background-color 0.3s ease 0s;
 		position: fixed;
 		width: 100%;
 		top: 0;
@@ -16,6 +43,7 @@
 	&__container {}
 
 	&__body {
+		transition: min-height 0.3s ease 0s;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -192,10 +220,10 @@
 	}
 
 	&__link {
+		color: #000;
 		font-size: 14px;
 		line-height: 18px;
 		font-weight: 400;
-		color: inherit;
 		transition: all 0.3s ease 0s;
 
 		@media (any-hover: hover) {

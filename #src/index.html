@@ -1,17 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
+@@include('_head.html',{
+"title":"Mixlab"
+})
 
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<section class="page__main main-page _ibg">
+				<img src="img/bg-main.jpg" alt="bg-main" class="main-page__img">
+				<div class="main-page__container _container">
+					<div class="main-page__wrapper">
+						<h1 class="main-page__title">The pet pharmacy humans are jealous of</h1>
+						<h3 class="main-page__subtitle">5 stars on <span><a href="#">Yelp</a></span>, <span><a href="#">Google</a></span>and <span><a href="#">Facebook<a></span> because your best friend deserves only the best in pet care</h3>
+						<button class="main-page__button button">Try Mixlab</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__supported supported">
+				<div class="supported__container _container">
+					<div class="supported__left">
+						<h2 class="supported__left-title">We couldn’t find a pharmacy experience worthy of our best buds— so we created
+							one</h2>
+						<img src="./img/dog.png" alt="dog" class="supported__left-img">
+					</div>
+
+					<div class="supported__right">
+						<div class="supported__right-block">
+							<h3 class="supported__right-block_title">Patients first, always</h3>
+							<div class="supported__right-block_text">We know how stressful it can be when your pet needs meds. That’s why we offer free next-day delivery and even do same-day in NYC and LA. We got you.</div>
+						</div>
+						<div class="supported__right-block">
+							<h3 class="supported__right-block_title">Tailored care</h3>
+							<div class="supported__right-block_text">We’ll work with you and your veterinarian to find the very best solution for your pet. With our custom compounded options, we can change the dosage, flavor and form. We even have a flavor guarantee with over 40 options! <br> P.S. Everyone seems to love the chicken-flavored chew treats!
+							</div>
+						</div>
+						<div class="supported__right-block">
+							<h3 class="supported__right-block_title">Support, 7 days a week</h3>
+							<div class="supported__right-block_text">You’re not alone. Text, call, or email us 7 days a week—we’ll answer and do our best to sprinkle in a bit of sunshine. ☀️</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__about about">
+				<div class="about__container _container">
+					<h2 class="about__title">How it works</h2>
+					<div class="about__items">
+						<div class="about__item">
+							<div class="about__item-img">
+								<img src="img/about-1.png" alt="about-1">
+							</div>
+							<div class="about__item-title">We receive your prescription</div>
+							<div class="about__item-text">Either your veterinarian sends us a prescription or we reach out to them for you. Whatever is easiest!</div>
+						</div>
+						<div class="about__item">
+							<div class="about__item-img">
+								<img src="img/about-2.png" alt="about-2">
+							</div>
+							<div class="about__item-title">We deliver your care package</div>
+							<div class="about__item-text">Fast and free next-day delivery, straight to your door. Same-day in NYC and LA.</div>
+						</div>
+						<div class="about__item">
+							<div class="about__item-img">
+								<img src="img/about-3.png" alt="about-3">
+							</div>
+							<div class="about__item-title">You treat your pet</div>
+							<div class="about__item-text">Give your pet the care they need to feel better. Plus they can play with our included toy!</div>
+						</div>
+					</div>
+					<button class="about__button button">Learn More</button>
+				</div>
+			</section>
+
+			<section class="page__forVeterinarians forVeterinarians">
+				<div class="forVeterinarians__container _container">
+					<div class="forVeterinarians__img _ibg">
+						<img src="img/forVeterinarians.png" alt="forVeterinarians">
+					</div>
+					<div class="forVeterinarians__descr">
+						<h3 class="forVeterinarians__subtitle">For Veterinarians</h3>
+						<h2 class="forVeterinarians__title">We're here to support you and your practice</h2>
+						<p class="forVeterinarians__text">Mixlab offers a simple, fast, reliable (and fun) home delivery pharmacy service for your clients. No more delays, no more miscommunications, no more grumpy pets. It’s time to partner with a pharmacy that cares about customer experience as much as you do.</p>
+						<button class="forVeterinarians__button button">Learn More</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>
